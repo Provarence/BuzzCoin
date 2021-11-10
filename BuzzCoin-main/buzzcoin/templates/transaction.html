@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block title %}
+  Transaction Form
+{% endblock %}
+{% block content %}
+<body class="text-center">
+    <div class="container">
+        <form method="POST" class="form-register" style="color:white">
+            <h1 class="h3 mb-3 font-weight-normal">
+                Please Create your Account
+            </h1>
+            <br>
+            {{ form.sender.label() }}
+            {{ form.sender(class="form-control", placeholder="Sender") }}
+
+            {{ form.receiver.label() }}
+            {{ form.receiver(class="form-control", placeholder="Receiver") }}
+
+            {{ form.amount.label() }}
+            {{ form.amount(class="form-control", placeholder="Amount") }}
+
+            {{ form.key.label() }}
+            {{ form.key(class="form-control", placeholder="Key") }}
+
+            <br>
+
+            {{ form.send(class="btn btn-lg btn-block btn-primary") }}
+
+        </form>
+    </div>
+</body>
+{% endblock %}
